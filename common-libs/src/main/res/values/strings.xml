@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">aaatech-common</string>
+    <string name="our_others_apps">Our Others Apps</string>
+    <string name="rate_us_on_play_store">Rate us on Play store</string>
+    <string name="spread_the_word">Spread the word</string>
+    <string name="feed_us_back">Feed us back</string>
+    <string name="check_for_update">Check for update</string>
+    <string name="privacy_policy">Privacy Policy</string>
+</resources>
