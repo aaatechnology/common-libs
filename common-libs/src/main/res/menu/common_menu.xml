@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/about"
+        android:title="About Us"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/rate_us"
+        android:title="Rate Us"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/other_apps"
+        android:title="Our Other Apps"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"
+        app:showAsAction="collapseActionView"/>
+</menu>
