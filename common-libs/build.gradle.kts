@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
+    id("maven-publish")
 }
 
 android {
@@ -11,7 +12,6 @@ android {
 
     defaultConfig {
         minSdk = 24
-        targetSdk = 34
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -36,8 +36,28 @@ android {
         viewBinding = true
         buildConfig = true
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId="com.github.aaatechnology"
+            artifactId="common-libs"
+            version="1.0.2"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}
 dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
